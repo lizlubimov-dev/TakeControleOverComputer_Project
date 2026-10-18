@@ -17,7 +17,7 @@ INT_LENGTH = 4
 CUR_IMG = NULL
 
 def create_port_for_client(HOST_IP ,PORT):
-	soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	try:
 		soc.bind((HOST_IP, PORT))
 	except:
