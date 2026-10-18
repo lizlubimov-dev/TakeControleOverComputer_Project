@@ -16,7 +16,7 @@ INT_CONVERTION = "big"
 def connect_to_server(port):
     SERVER_IP = "10.100.102.23"
 
-    soc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     soc.connect((SERVER_IP, port))
 
     return soc;
