@@ -31,12 +31,6 @@ def keyboard_controle():
     to_do = "unknown"
     while True:
         to_do = soc.recv(CHAR_SIZE_IN_BYTES).decode(STR_CONVERTION)
-        """if shift_pressed:
-            with keyboard.pressed(keyboard.key.shift):
-                press_release_key(soc=soc, keyboard=keyboard, to_do=to_do, shift_pressed=shift_pressed)
-                GGGGGGHHHHHHHGSSSAAAAAXXVVggggAAAADFFFFGGGGGDDDDDddd        \\
-                PPPpppp
-                103FDSSS"""
         if to_do == 'p':
             key = soc.recv(INT_SIZE_IN_BYTES)
             key = int.from_bytes(key, INT_CONVERTION)
